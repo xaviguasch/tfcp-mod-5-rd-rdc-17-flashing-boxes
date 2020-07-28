@@ -3,7 +3,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: '1 2', '3 4';
+  grid-template-areas: '1 2' '3 4';
   height: 100vh;
   margin: 0;
 }
@@ -32,3 +32,44 @@ body {
 /* ==========================
 	Write your solution here!
    ========================== */
+
+@media (min-width: 300px) {
+  .box-2,
+  .box-3,
+  .box-4 {
+    opacity: 0;
+  }
+}
+@media (min-width: 500px) {
+  .box-2 {
+    opacity: 1;
+  }
+
+  .box-1,
+  .box-3,
+  .box-4 {
+    opacity: 0;
+  }
+}
+@media (min-width: 700px) {
+  .box-3 {
+    opacity: 1;
+  }
+
+  .box-1,
+  .box-2,
+  .box-4 {
+    opacity: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .box-4 {
+    opacity: 1;
+  }
+
+  .box-1,
+  .box-2,
+  .box-3 {
+    opacity: 0;
+  }
+}
